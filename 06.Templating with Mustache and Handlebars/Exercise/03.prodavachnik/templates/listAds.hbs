@@ -1,0 +1,21 @@
+{{> header}}
+<div id="ads" class="ads">
+    <h1 class="titleForm">Advertisements</h1>
+    <table>
+        <tr>
+            <th>Visits</th>
+            <th>Title</th>
+            <th>Publisher</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Date Published</th>
+            <th>Actions</th>
+        </tr>
+        {{#each ads}}
+            {{> ad}}
+        {{else}}
+            <p>NO ADS</p>
+        {{/each}}
+    </table>
+</div>
+{{> footer}}

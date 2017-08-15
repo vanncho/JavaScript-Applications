@@ -1,0 +1,15 @@
+<tr data-id="{{_id}}">
+    <td>{{visits}}</td>
+    <td>{{title}}</td>
+    <td>{{publisher}}</td>
+    <td>{{description}}</td>
+    <td>{{price}}</td>
+    <td>{{datePublished}}</td>
+    <td>
+        <a href="#/read/:{{_id}}" id="read" class="adAction">READ MORE</a>
+        {{#if creator}}
+        <a href="#/delete/:{{_id}}" id="delete" class="adAction">DELETE</a>
+        <a href="#/edit/:{{_id}}" id="edit" class="adAction">EDIT</a>
+        {{/if}}
+    </td>
+</tr>

@@ -1,0 +1,11 @@
+function loadRepos() {
+
+    let req = new XMLHttpRequest();
+    req.onreadystatechange = function () {
+
+        $('#res').text(this.responseText);
+    };
+
+    req.open("GET", "https://api.github.com/users/testnakov/repos", true);
+    req.send();
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="books.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="books.js"></script>
+</head>
+<body>
+<h1>Books</h1>
+<hr>
+<div id="all-books"></div>
+<div id="addBookForm">
+    <label for="isbn-create">ISBN:</label>
+    <input type="number" id="isbn-create" class="form-control" style="display: inline"><br>
+    <label for="title-create">Title:</label>
+    <input type="text" id="title-create" class="form-control" style="display: inline"><br>
+    <label for="author-create">Author:</label>
+    <input type="text" id="author-create" class="form-control" style="display: inline"><br>
+    <button id="addBook" class="btn btn-success">Create Book</button>
+</div>
+<script>attachEvents()</script>
+</body>
+</html>

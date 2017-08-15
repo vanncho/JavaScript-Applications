@@ -1,0 +1,34 @@
+{{> header}}
+<section id="viewEditAd" class="viewEditAd">
+    <h1 class="titleForm">Edit existing advertisement</h1>
+    <form action="#/edit/:{{_id}}" id="formEditAd" class="form" method="post">
+        <div>
+            <input type="hidden" name="id" required/>
+        </div>
+        <div>
+            <input type="hidden" name="publisher" required/>
+        </div>
+        <div class="notempty">Title:</div>
+        <div>
+            <input type="text" name="title" value="{{title}}" required/>
+        </div>
+        <div class="notempty">Description:</div>
+        <div>
+            <textarea name="description" rows="10" required>{{description}}</textarea>
+        </div>
+        <div>Date Published:</div>
+        <div>
+            <input type="text" id="datePublished" name="datePublished" value="{{datePublished}}" disabled/>
+        </div>
+        <div class="notempty">Price:</div>
+        <div>
+            <input type="number" step="0.01" name="price" value="{{price}}" required/>
+        </div>
+        <div>Image:</div>
+        <div>
+            <input type="text" name="image" value="{{imageUrl}}"/>
+        </div>
+        <div><input type="submit" id="buttonEditAd" value="Edit"/></div>
+    </form>
+</section>
+{{> footer}}

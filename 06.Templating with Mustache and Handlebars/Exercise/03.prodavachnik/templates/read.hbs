@@ -1,0 +1,31 @@
+{{> header}}
+<div>
+    <h1 class="titleForm">{{title}}</h1>
+</div>
+<section id="viewDetailedAd" class="viewEditAd">
+    <img id="imgUrl" alt="" src="{{imageUrl}}" height="250" width="400">
+    <div>
+        <br>
+        <div>
+            <span class="descr">TITLE: </span>
+            <span id="detailedAdTitle">{{title}}</span>
+        </div>
+        <div>
+            <span class="descr">DESCRIPTION: </span>
+            <span id="detailedAdDescription">{{description}}</span>
+        </div>
+        <div>
+            <span class="descr">PUBLISHER: </span>
+            <span id="detailedAdPublisher">{{publisher}}</span>
+        </div>
+        <div>
+            <span class="descr">DATE: </span>
+            <span id="detailedAdDate">{{datePublished}}</span>
+        </div>
+        <div>
+            <span class="descr">VISITS: </span>
+            <span id="showAd">{{visits}}</span>
+        </div>
+    </div>
+</section>
+{{> footer}}

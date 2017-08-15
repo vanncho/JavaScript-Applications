@@ -1,0 +1,14 @@
+{{> header}}
+<section id="viewRegister" class="viewRegister">
+    <h1 class="titleForm">Please register here</h1>
+    <form action="#/register" id="formRegister" class="form" method="post">
+        <div class="notempty">Username:</div>
+        <div><input type="text" name="username" required/></div>
+        <div class="notempty">Password:</div>
+        <div><input type="password" name="passwd" required/></div>
+        <div class="notempty">Repeat password:</div>
+        <div><input type="password" name="passwdRpt" required/></div>
+        <div><input type="submit" id="buttonRegisterUser" value="Register"/></div>
+    </form>
+</section>
+{{> footer}}

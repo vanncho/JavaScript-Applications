@@ -1,0 +1,26 @@
+input {
+    margin: 5px;
+    width: 13%;
+}
+
+label {
+    min-width: 10%;
+    display: inline-block;
+}
+
+.curr-book {
+    margin-bottom: 5px;
+}
+
+.show {
+    border: none;
+    pointer-events: none;
+}
+
+button {
+    margin-right: 5px;
+}
+
+.update {
+    display: none;
+}
