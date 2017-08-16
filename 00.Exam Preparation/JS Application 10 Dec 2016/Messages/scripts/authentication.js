@@ -34,7 +34,12 @@ let authentication = (() => {
     }
 
     function logout() {
-        sessionStorage.clear();
+        
+        let logoutData = {
+            authtoken: sessionStorage.getItem('authtoken')
+        };
+
+        return requester.post('user', '_logout', 'kinvey', logoutData);
     }
 
     function showError(error) {
