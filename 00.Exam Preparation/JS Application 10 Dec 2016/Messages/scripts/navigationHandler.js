@@ -48,6 +48,7 @@ $(() => {
                 footer: './templates/common/footer.hbs'
             }).then(function () {
                 authentication.logout();
+                sessionStorage.clear();
                 displayHome(context);
                 setTimeout(() => authentication.showInfo('Logged out...'), 500);
             })
