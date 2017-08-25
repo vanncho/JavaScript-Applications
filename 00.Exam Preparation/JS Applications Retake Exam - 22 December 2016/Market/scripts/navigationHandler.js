@@ -149,7 +149,7 @@ $(() => {
                         for (let productObj in userData.cart) {
 
                             let product = {
-                                id: productObj,
+                                _id: productObj,
                                 quantity: userData.cart[productObj].quantity,
                                 name: userData.cart[productObj].product.name,
                                 description: userData.cart[productObj].product.description,
