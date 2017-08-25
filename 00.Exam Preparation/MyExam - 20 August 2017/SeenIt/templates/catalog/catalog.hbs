@@ -1,0 +1,12 @@
+{{> header}}
+<div class="content">
+    {{> menu}}
+    <section id="viewCatalog">
+        <div class="posts">
+            {{#each posts}}
+                {{> post}}
+            {{/each}}
+        </div>
+    </section>
+    {{> footer}}
+</div>

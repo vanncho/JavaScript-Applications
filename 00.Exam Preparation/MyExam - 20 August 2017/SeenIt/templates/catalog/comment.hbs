@@ -1,0 +1,56 @@
+{{> header}}
+<div class="content">
+    {{> menu}}
+    <section id="viewComments">
+        <div class="post">
+            <div class="col thumbnail">
+                <a href="{{url}}">
+                    <img src="{{imageUrl}}">
+                </a>
+            </div>
+            <div class="post-content">
+                <div class="title">
+                    <a href="http://sammyjs.org/docs/api/0.7.4/all#Sammy.RenderContext-load">
+                        {{title}}
+                    </a>
+                </div>
+                <div class="details">
+                    <p>{{description}}</p>
+                    <div class="info">
+                        submitted {{info}} ago by {{author}}
+                    </div>
+                    <div class="controls">
+                        <ul>
+                            <li class="action"><a class="editLink" href="#/edit/:{{_id}}">edit</a></li>
+                            <li class="action"><a class="deleteLink" href="#/delete/:{{_id}}">delete</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="post post-content">
+            <form id="commentForm" action="#/addComment/:{{_id}}" method="post">
+                <label>Comment</label>
+                <textarea name="content" type="text"></textarea>
+                <input type="submit" value="Add Comment" id="btnPostComment">
+            </form>
+        </div>
+    {{#if comments}}
+        {{#each comments}}
+            <article class="post post-content">
+                <p>{{content}}</p>
+                <div class="info" data-id="{{postId}}">
+                    submitted {{info}} ago by {{author}}{{#if isAuthor}} | <a href="#/deleteComment/:{{_id}}" class="deleteLink">delete</a>{{/if}}
+                </div>
+            </article>
+        {{/each}}
+    {{else}}
+        <article class="post">
+            <div>No comments yet.</div>
+        </article>
+    {{/if}}
+    </section>
+    {{> footer}}
+</div>
